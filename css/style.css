@@ -4,12 +4,16 @@
 
 body {
     margin: 0;
-    padding: 0 0 80px 0;
-    box-sizing: border-box;
 
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(180deg, #0a3d62, #1e81b0);
     color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 header {
@@ -32,15 +36,13 @@ header p {
 
     display: grid;
 
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 36% 64%;
 
     gap: 2vw;
 
-    width: min(96vw, 1600px);
-
-    height: calc(100vh - 110px);
-
-    margin: 0 auto;
+    width: 100%;
+    
+    flex: 1;
 
     padding: 2vh 2vw;
 
@@ -50,6 +52,9 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
 }
 
 .pointer {
@@ -105,6 +110,10 @@ header p {
     display: flex;
 
     flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
 
     gap: 2vh;
 
@@ -322,3 +331,15 @@ header p {
     cursor: pointer;
 
 }
+.game-container {
+
+    width: min(1600px, 100vw);
+    height: 100vh;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
