@@ -341,4 +341,12 @@ header p {
     flex-direction: column;
 
 }
+@media (max-height: 900px) {
+
+    .game-container {
+        transform: scale(.92);
+        transform-origin: top center;
+    }
+
+}
 
