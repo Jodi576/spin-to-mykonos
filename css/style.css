@@ -225,7 +225,7 @@ header p {
 
 #wheelSvg {
 
-    width: min(40vw, 60vh);
+    width: min(38vw, 56vh);
     height: auto;
 
     transition: transform 4s cubic-bezier(.22,1,.36,1);
