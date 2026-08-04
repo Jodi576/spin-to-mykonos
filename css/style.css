@@ -6,7 +6,11 @@ body {
     margin: 0;
 
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(180deg, #0a3d62, #1e81b0);
+    background-image: url("../assets/images/mykonosbg2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
 
     min-height: 100vh;
@@ -123,10 +127,12 @@ header p {
 
 .passport,
 .controls {
-    background: rgba(255,255,255,.12);
+    background: rgba(10, 40, 80, .60);
     border-radius: 20px;
     padding: 20px;
     backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 12px 30px rgba(0,0,0,.20);
 }
 
 .letters {
@@ -186,13 +192,15 @@ header p {
     width: 100%;
     max-width: 100%;
 
-    background: rgba(255,255,255,.12);
+    background: rgba(10, 40, 80, .55);
 
     border-radius: 20px;
 
     text-align: center;
 
     backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 12px 30px rgba(0,0,0,.20);
 }
 
 .now-spinning h2 {
