@@ -15,9 +15,7 @@ export function createWheel() {
     let svg = `
 <svg
     id="wheelSvg"
-    viewBox="0 0 500 500"
-    width="600"
-    height="600">`;
+    viewBox="0 0 500 500">`;
 
     slices.forEach((label, i) => {
 
