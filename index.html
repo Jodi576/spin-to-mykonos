@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spin to Mykonos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+    <h1>🏝️ Spin to Mykonos</h1>
+</header>
+<main class="game-layout">
+
+    <aside class="sidebar">
+
+        <section class="passport">
+
+            <h2>Passport Scoreboard</h2>
+
+            <div id="passportScoreboard">
+
+                <!-- Territories will be added here by JavaScript -->
+
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <h2>Game Controls</h2>
+
+            <button id="newGame">
+                New Game
+            </button>
+
+        </section>
+
+    </aside>
+
+    <section class="wheel-area">
+
+        <div class="pointer"></div>
+
+        <div id="wheel"></div>
+
+        <section class="now-spinning">
+
+            <h2>🎡 NOW SPINNING</h2>
+
+            <div id="currentTerritory">
+                Select a Territory
+            </div>
+
+        </section>
+
+        <button id="spinButton">
+            SPIN
+        </button>
+
+    </section>
+
+</main>
+<div id="winnerModal" class="winner-modal hidden">
+
+    <div class="winner-card">
+
+        <h1>🏆 WINNER!</h1>
+
+        <h2 id="winnerName"></h2>
+
+        <p>
+            Completed the MYKONOS Passport!
+        </p>
+
+        <button id="closeWinner">
+            AWESOME!
+        </button>
+
+    </div>
+
+</div>
+<script type="module" src="js/core/app.js"></script>
+</body>
+</html>

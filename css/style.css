@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 0 80px 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #0a3d62, #1e81b0);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    color: gold;
+    font-size: 3rem;
+}
+
+header p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.game-layout {
+    display: grid;
+
+    grid-template-columns: 500px 1fr;
+
+    gap: 40px;
+
+    max-width: 1400px;
+
+    margin: 0 auto 80px auto;
+
+    padding: 30px;
+}
+
+.wheel-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pointer {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 30px solid gold;
+    margin-bottom: 15px;
+}
+
+#wheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinButton {
+    margin-top: 25px;
+    padding: 15px 45px;
+    font-size: 1.2rem;
+    background: gold;
+    color: #083D77;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#spinButton:hover {
+    background: #f7d14b;
+}
+
+#spinButton:disabled {
+
+    background: #999;
+
+    color: white;
+
+    cursor: not-allowed;
+
+    opacity: .7;
+
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    max-width: 450px;
+}
+
+.passport,
+.controls {
+    background: rgba(255,255,255,.12);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.letters {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.letters div {
+    background: white;
+    color: #083D77;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+/* -----------------------------
+   Passport Scoreboard
+----------------------------- */
+
+.territory-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 16px;
+    margin-top: 10px;
+
+    background: rgba(255,255,255,.08);
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.territory-row:hover {
+    background: rgba(255,255,255,.18);
+    transform: translateX(4px);
+}
+
+.territory-row.selected {
+    background: gold;
+    color: #083D77;
+    font-weight: bold;
+}
+
+/* -----------------------------
+   NOW SPINNING
+----------------------------- */
+
+.now-spinning {
+    margin-top: 25px;
+    padding: 20px;
+
+    width: 100%;
+    max-width: 500px;
+
+    background: rgba(255,255,255,.12);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+}
+
+.now-spinning h2 {
+    margin-top: 0;
+}
+
+#currentTerritory {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* -----------------------------
+   Control Buttons
+----------------------------- */
+
+.controls button {
+    width: 100%;
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: gold;
+    color: #083D77;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #f7d14b;
+}
+/* -----------------------------
+   Wheel Animation
+----------------------------- */
+
+#wheelSvg {
+    transition: transform 4s cubic-bezier(.22, 1, .36, 1);
+    transform-origin: center center;
+}
+
+/* -----------------------------
+   Winner Modal
+----------------------------- */
+
+.winner-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.65);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+.winner-card {
+
+    background: white;
+
+    color: #083D77;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    width: 420px;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.winner-card h1 {
+
+    color: gold;
+
+    margin-top: 0;
+
+    font-size: 3rem;
+
+}
+
+.winner-card h2 {
+
+    margin: 20px 0;
+
+}
+
+.winner-card p {
+
+    font-size: 1.2rem;
+
+}
+
+.winner-card button {
+
+    margin-top: 25px;
+
+    padding: 15px 40px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: gold;
+
+    color: #083D77;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
